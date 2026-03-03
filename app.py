@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 # Load API Key
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("OPEN_API_KEY")
 
 st.set_page_config(page_title="AI Voice Agent", page_icon="🎤")
 st.title("🗣️ AI Voice-to-Text Agent")
