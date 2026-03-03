@@ -19,14 +19,14 @@ if audio_bytes:
     st.audio(audio_bytes, format="audio/wav")
     
     # Save recording temporarily to send to API
-    with open("temp_audio.wav""wb") as f:
+    with open("temp_audio.wav","wb") as f:
         f.write(audio_bytes)
         
     if st.button("Transcribe Audio"):
         st.info("Transcribing...")
         try:
             # Send to Whisper
-            with open("temp_audio.wav""rb") as audio_file:
+            with open("temp_audio.wav", "rb") as audio_file:
                 transcript = openai.Audio.transcribe("whisper-1", audio_file)
             
             # Display result
